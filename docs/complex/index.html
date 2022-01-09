@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Social -->
+        <meta property="og:description" content="Playground for PWAs GOV.CY.">
+        <meta property="og:title" content="PWA - GOV.CY">
+        <meta property="og:url" content="https://gov-cy.github.io/dsf-pwa-playground/complex">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://gov-cy.github.io/dsf-pwa-playground/complex/img/icons-512.png">
+        <meta property="og:site_name" content="GOV.CY">
+    
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://gov-cy.github.io/dsf-pwa-playground/complex">
+        <meta property="twitter:title" content="PWA - GOV.CY">
+        <meta property="twitter:description" content="Playground for PWAs GOV.CY.">
+        <meta property="twitter:image" content="https://gov-cy.github.io/dsf-pwa-playground/complex/img/icons-512.png">
+        <!-- Theme --> 
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#31576F">
+        <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57x57-precomposed.png">
+        <!-- Bootstrap CSS -->
+        <link href="css/main.css" rel="stylesheet" >
+        <link href="css/aditional.css" rel="stylesheet" >
+        
+        <title>PWA - GOV.CY</title>
+        <meta name="description" content="Playground for PWAs GOV.CY.">
+    </head>
+    <body>
+    <!--Header-->
+    <div class="govcy-container-fluid govcy-m-0 govcy-p-0 bg-header-right" id="headerContainerOut">
+        <div class="govcy-container" id="headerContainer"><div class="row"><header class="govcy-header"><a href="#" class="govcy-header-logo"> <img></a><form><select id="changeLangSel" name="govcy-header-lang-menu" class="govcy-header-lang-menu"><option value="en" selected="">EN</option><option value="el">EL</option></select></form><input class="govcy-header-menu-btn" type="checkbox" id="menu-btn"><label class="govcy-header-menu-icon" for="menu-btn">Menu<a><span class="material-icons carot-icon">arrow_drop_down</span></a></label><label class="govcy-header-service-name"> <span>Digital Services</span></label><ul class="govcy-header-menu"><li><a href="#">Guidance</a></li><li><a href="#">Help</a></li><li><a href="#">Login</a></li></ul></header></div></div>
+    </div>
+    <!--Top Menu-->
+    <div class="govcy-container-fluid" id="topMenuContainer">
+        
+    </div>
+    <!--Main-->
+    <main class="govcy-container govcy-mb-2" id="mainContainer">
+        <h1>Complex PWA</h1>
+        <h2>Caching Strategies</h2>
+        <h3>Navigations (html)</h3>
+        <img src="img/network-first.png" class="img-fluid" alt="Navigation Fist Diagram">
+        <p>Cache page navigations (html) with a Network First strategy</p>
+        <h3>CSS, JS, and Web Worker</h3>
+        <img src="img/stale-while-revalidate.png" class="img-fluid" alt="Stale While Revalidate strategy Diagram">
+        <p>Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy</p>
+        <h3>Images</h3>
+        <img src="img/cache-first.png" class="img-fluid" alt="Cache First Diagram">
+        <p>Cache images with a Cache First strategy</p>
+        
+    </main>
+    <!-- Footer -->
+    <div class="govcy-container-fluid govcy-m-0 govcy-p-0 govcy-br-top-8 govcy-br-top-primary govcy-bg-light">
+        <div class="govcy-container" id="footerContainer"><div class="row"><footer class="govcy-footer govcy-p-3 govcy-bg-light"><span class="govcy-d-inline-block govcy-valign-top govcy-pb-2"><img alt="govcy-logo"></span><ul class="govcy-d-inline-block  govcy-m-0 govcy-pl-3 govcy-efs-medium"><li><a href="#">Privacy statement</a></li><li><a href="#">Cookie policy</a></li><li><a href="#">Accessibility statement</a></li><li class="govcy-d-block govcy-text-dark">© Republic of Cyprus, 2021</li></ul></footer></div></div>
+    </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw-complex.js');
+              });
+            }
+        </script>
+    </body>
+</html>

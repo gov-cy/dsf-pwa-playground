@@ -1,0 +1,17 @@
+{
+    "name": "govcy-pwa-playground",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.html",
+    "author": "DMRID - DSF Team",
+    "license": "MIT",
+    "scripts": {
+        "start": "http-server -p 8080 -a localhost -c 0 -o docs/ ",
+        "build-pre" : "workbox generateSW src/pre/workbox-config-pre.js",
+        "build-complex" : "workbox injectManifest src/complex/workbox-config.js",
+        "build-docs-pre" : "workbox injectManifest src/docs-pre/workbox-config.js"
+    },
+    "devDependencies": {
+        "http-server": "^13.0.2"
+    }
+}

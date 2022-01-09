@@ -1,0 +1,14 @@
+.bg-header-right:after {
+    height: 61px;
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+    background-color: #31576f;
+    z-index: -1;
+}
+.govcy-header-logo {
+    height:61px;
+}
