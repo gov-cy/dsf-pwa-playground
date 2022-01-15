@@ -45,21 +45,38 @@
         <div class="container-md" style="font-size: 16px;">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="./">Digital Services</a></li>
-                  <li class="breadcrumb-item">Social Welfare and Government Support</li>
-                  <li class="breadcrumb-item">Pension</li>
-                  <li class="breadcrumb-item active" aria-current="page">Temporary Calculation of the amount of Old - Age Pension</li>
+                  <li class="breadcrumb-item"><a href="#">Digital Services</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Social Welfare and Government Support</li>
                 </ol>
               </nav>
         </div>
     </div>
     <!--Main-->
     <main class="govcy-container govcy-mb-2" id="mainContainer">
-        <h1>Temporary Calculation of the amount of Old - Age Pension</h1>
-        <p>Here you have the possibility of proceeding to a temporary calculation of the amount of old-age pension.</p>
-        <h2>Prerequisites for the execution of eService</h2>
-        <div class="govcy-mt-3"><p>1. You will need to register at Cy Login. New user? Register <a href="https://cge.cyprus.gov.cy/cyloginregistration/register" target="_blank">here</a></p> <p>2. Already a registered user? You will also need to authenticate your profile through your electronic banking system (eBanking) or by visiting a Citizen Service Centre or a Citizen Center (KE.PO. - District Post Offices).</p> <p>3. Have you been registered and authenticated? Please enroll in the system of the Social Insurance Services<a href="https://cge.cyprus.gov.cy/cyloginregistration/enrolments" target="_blank"> here</a></p> <p>Have you completed the above steps;</p></div>
-        <button type="button" class="govcy-btn-primary" id="nextRoutebtn" onclick="location.href='https://eforms.eservices.cyprus.gov.cy/MLSI/SIS/PensionDetails?_lang=en'">Start</button>
+        <h1>Social Welfare and Government Support</h1>
+        <div class="row">
+            <div class="govcy-col-4 govcy-text-center">
+                <a href="benefit.html">
+                    <img src="img/002-welfare.png" class="img-fluid"  alt="Benefits and allowances">
+                    <div class="govcy-fs-4">Benefits and allowances</div>
+                </a>
+                <p>Certificate οf Pension / Benefit Payment etc.</p>
+            </div>
+            <div class="govcy-col-4 govcy-text-center">
+                <a href="pension.html">
+                    <img src="img/003-pension.png" class="img-fluid"  alt="Pensions">
+                    <div class="govcy-fs-4">Pensions</div>
+                </a>
+                <p>Temporary Calculation of the amount of Old - Age Pension etc.</p>
+            </div>
+            <div class="govcy-col-4 govcy-text-center">
+                <a href="https://eservices.bdigital.eu/en/digital-services/social-welfare-and-government-support/support-schemes">
+                    <img src="img/002-welfare.png" class="img-fluid"  alt="Support schemes">
+                    <div class="govcy-fs-4">Support schemes</div>
+                </a>
+                <p>NSP participation in the wine sector etc.</p>
+            </div>
+        </div>
     </main>
     <!-- Footer -->
     <div class="govcy-container-fluid govcy-m-0 govcy-p-0 govcy-br-top-8 govcy-br-top-primary govcy-bg-light">
@@ -72,9 +89,9 @@
             if ('serviceWorker' in navigator) {
               // Use the window load event to keep the page load performant
               window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js');
+                navigator.serviceWorker.register('sw-offline.js');
               });
             }
-            </script>
+        </script>
     </body>
 </html>

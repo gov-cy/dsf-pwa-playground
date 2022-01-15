@@ -9,6 +9,7 @@
         "start": "http-server -p 8080 -a localhost -c 0 -o docs/ ",
         "build-pre" : "workbox generateSW src/pre/workbox-config-pre.js",
         "build-complex" : "workbox injectManifest src/complex/workbox-config.js",
+        "build-offline" : "workbox injectManifest src/offline/workbox-config.js",
         "build-docs-pre" : "workbox injectManifest src/docs-pre/workbox-config.js"
     },
     "devDependencies": {
